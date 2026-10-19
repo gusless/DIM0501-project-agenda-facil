@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module agenda_facil.validators</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="agenda_facil.html" class="white">agenda_facil</a>.validators</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:e%3A%5Cprogramming%5Cstudy%5Cboaspraticas%5Cproj_un1%5Cagendafacil_projeto%5Cagendafacil%5Cagenda_facil%5Cvalidators.py">e:\programming\study\boaspraticas\proj_un1\agendafacil_projeto\agendafacil\agenda_facil\validators.py</a></td></tr></table>
+    <p><span class="code">Validações&nbsp;de&nbsp;entrada&nbsp;e&nbsp;regras&nbsp;de&nbsp;negócio.</span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-validar_data"><strong>validar_data</strong></a>(data_texto: str) -&gt; None</dt><dd><span class="code">Valida&nbsp;uma&nbsp;data&nbsp;no&nbsp;formato&nbsp;AAAA-MM-DD.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data_texto:&nbsp;Data&nbsp;a&nbsp;validar.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;Se&nbsp;a&nbsp;data&nbsp;não&nbsp;existir&nbsp;ou&nbsp;não&nbsp;seguir&nbsp;o&nbsp;formato&nbsp;exigido.</span></dd></dl>
+ <dl><dt><a name="-validar_horario"><strong>validar_horario</strong></a>(hora: int, duracao: int) -&gt; None</dt><dd><span class="code">Valida&nbsp;o&nbsp;horário&nbsp;de&nbsp;início&nbsp;e&nbsp;a&nbsp;duração&nbsp;de&nbsp;um&nbsp;atendimento.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;hora:&nbsp;Hora&nbsp;de&nbsp;início,&nbsp;entre&nbsp;8&nbsp;e&nbsp;17.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;duracao:&nbsp;Duração&nbsp;em&nbsp;minutos.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;Se&nbsp;horário&nbsp;ou&nbsp;duração&nbsp;violarem&nbsp;as&nbsp;regras&nbsp;de&nbsp;negócio.</span></dd></dl>
+ <dl><dt><a name="-validar_texto"><strong>validar_texto</strong></a>(valor: str, campo: str) -&gt; None</dt><dd><span class="code">Valida&nbsp;um&nbsp;campo&nbsp;textual&nbsp;obrigatório.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;valor:&nbsp;Texto&nbsp;informado.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;campo:&nbsp;Nome&nbsp;do&nbsp;campo&nbsp;para&nbsp;a&nbsp;mensagem&nbsp;de&nbsp;erro.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;Se&nbsp;o&nbsp;valor&nbsp;não&nbsp;for&nbsp;texto&nbsp;não&nbsp;vazio.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>DURACAO_MAXIMA</strong> = 120<br>
+<strong>DURACAO_MINIMA</strong> = 15<br>
+<strong>HORA_FIM_MAXIMA</strong> = 18<br>
+<strong>HORA_INICIO_MAXIMA</strong> = 17<br>
+<strong>HORA_INICIO_MINIMA</strong> = 8<br>
+<strong>INTERVALO_DURACAO</strong> = 15</td></tr></table>
+</body></html>

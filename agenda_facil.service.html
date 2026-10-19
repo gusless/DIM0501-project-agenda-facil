@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module agenda_facil.service</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="agenda_facil.html" class="white">agenda_facil</a>.service</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:e%3A%5Cprogramming%5Cstudy%5Cboaspraticas%5Cproj_un1%5Cagendafacil_projeto%5Cagendafacil%5Cagenda_facil%5Cservice.py">e:\programming\study\boaspraticas\proj_un1\agendafacil_projeto\agendafacil\agenda_facil\service.py</a></td></tr></table>
+    <p><span class="code">Serviços&nbsp;de&nbsp;negócio&nbsp;para&nbsp;a&nbsp;agenda&nbsp;de&nbsp;atendimentos.</span></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="agenda_facil.service.html#Agenda">Agenda</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Agenda">class <strong>Agenda</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Agenda">Agenda</a>()&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Mantém&nbsp;os&nbsp;atendimentos&nbsp;em&nbsp;memória&nbsp;e&nbsp;aplica&nbsp;as&nbsp;regras&nbsp;da&nbsp;agenda.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Agenda-__init__"><strong>__init__</strong></a>(self) -&gt; None</dt><dd><span class="code">Cria&nbsp;uma&nbsp;agenda&nbsp;vazia.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.</span></dd></dl>
+
+<dl><dt><a name="Agenda-atendimentos"><strong>atendimentos</strong></a>(self) -&gt; tuple[Atendimento, ...]</dt><dd><span class="code">Retorna&nbsp;uma&nbsp;visão&nbsp;imutável&nbsp;dos&nbsp;atendimentos&nbsp;cadastrados.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Tupla&nbsp;com&nbsp;os&nbsp;atendimentos&nbsp;cadastrados.</span></dd></dl>
+
+<dl><dt><a name="Agenda-existe_conflito"><strong>existe_conflito</strong></a>(
+    self,
+    profissional: str,
+    data: str,
+    hora: int,
+    ignorar: Atendimento | None = None
+) -&gt; bool</dt><dd><span class="code">Verifica&nbsp;se&nbsp;um&nbsp;profissional&nbsp;já&nbsp;possui&nbsp;atendimento&nbsp;no&nbsp;mesmo&nbsp;dia&nbsp;e&nbsp;hora.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;profissional:&nbsp;Nome&nbsp;do&nbsp;profissional.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;Data&nbsp;do&nbsp;atendimento.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;hora:&nbsp;Hora&nbsp;de&nbsp;início.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ignorar:&nbsp;Atendimento&nbsp;a&nbsp;excluir&nbsp;da&nbsp;verificação,&nbsp;como&nbsp;numa&nbsp;remarcação.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;se&nbsp;existir&nbsp;conflito;&nbsp;caso&nbsp;contrário,&nbsp;False.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;Se&nbsp;profissional,&nbsp;data&nbsp;ou&nbsp;hora&nbsp;forem&nbsp;inválidos.</span></dd></dl>
+
+<dl><dt><a name="Agenda-listar_consultas_por_data"><strong>listar_consultas_por_data</strong></a>(self, data: str) -&gt; list[Atendimento]</dt><dd><span class="code">Lista&nbsp;os&nbsp;atendimentos&nbsp;de&nbsp;uma&nbsp;data,&nbsp;preservando&nbsp;a&nbsp;ordem&nbsp;de&nbsp;cadastro.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;Data&nbsp;no&nbsp;formato&nbsp;AAAA-MM-DD.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Lista&nbsp;dos&nbsp;atendimentos&nbsp;da&nbsp;data&nbsp;informada.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;Se&nbsp;a&nbsp;data&nbsp;for&nbsp;inválida.</span></dd></dl>
+
+<dl><dt><a name="Agenda-marcar_consulta"><strong>marcar_consulta</strong></a>(
+    self,
+    paciente: str,
+    profissional: str,
+    data: str,
+    hora: int,
+    duracao: int
+) -&gt; bool</dt><dd><span class="code"><a href="#Agenda">Agenda</a>&nbsp;um&nbsp;atendimento,&nbsp;sem&nbsp;imprimir&nbsp;mensagens.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;paciente:&nbsp;Nome&nbsp;do&nbsp;paciente.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;profissional:&nbsp;Nome&nbsp;do&nbsp;profissional.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;Data&nbsp;no&nbsp;formato&nbsp;AAAA-MM-DD.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;hora:&nbsp;Hora&nbsp;de&nbsp;início.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;duracao:&nbsp;Duração&nbsp;em&nbsp;minutos.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;se&nbsp;o&nbsp;atendimento&nbsp;foi&nbsp;marcado;&nbsp;False&nbsp;se&nbsp;o&nbsp;horário&nbsp;estiver&nbsp;ocupado.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;Se&nbsp;qualquer&nbsp;dado&nbsp;violar&nbsp;as&nbsp;regras&nbsp;de&nbsp;negócio.</span></dd></dl>
+
+<dl><dt><a name="Agenda-remarcar_consulta"><strong>remarcar_consulta</strong></a>(
+    self,
+    paciente: str,
+    data_atual: str,
+    hora_atual: int,
+    nova_data: str,
+    nova_hora: int
+) -&gt; bool</dt><dd><span class="code">Remarca&nbsp;o&nbsp;atendimento&nbsp;de&nbsp;um&nbsp;paciente.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;paciente:&nbsp;Nome&nbsp;do&nbsp;paciente.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data_atual:&nbsp;Data&nbsp;atual&nbsp;no&nbsp;formato&nbsp;AAAA-MM-DD.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;hora_atual:&nbsp;Hora&nbsp;atual.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nova_data:&nbsp;Nova&nbsp;data&nbsp;no&nbsp;formato&nbsp;AAAA-MM-DD.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nova_hora:&nbsp;Nova&nbsp;hora&nbsp;de&nbsp;início.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;se&nbsp;foi&nbsp;remarcado;&nbsp;False&nbsp;se&nbsp;o&nbsp;atendimento&nbsp;não&nbsp;existir&nbsp;ou&nbsp;o&nbsp;novo<br>
+&nbsp;&nbsp;&nbsp;&nbsp;horário&nbsp;estiver&nbsp;ocupado.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;Se&nbsp;os&nbsp;dados&nbsp;informados&nbsp;forem&nbsp;inválidos.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
