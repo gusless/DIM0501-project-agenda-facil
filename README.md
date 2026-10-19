@@ -17,7 +17,6 @@ Augusto César da Silva Carvalho | 20250058768
 - `agenda_facil/validators.py`: validações e constantes de negócio.
 - `agenda_facil/service.py`: regras e operações da agenda, sem impressão no terminal.
 - `main.py`: demonstração e apresentação das mensagens.
-- `tests/`: testes automatizados.
 - `docs/`: documentação de API.
 
 ## Executar
