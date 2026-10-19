@@ -2,8 +2,8 @@
 
 **Disciplina:** DIM0501 — Boas Práticas de Programação  
 **Linguagem:** Python 3.10+  
-**Integrantes e matrículas:** Augusto César da Silva Carvalho  
-**Repositório/arquivo:** 
+**Integrante e matrículas:** Augusto César da Silva Carvalho | 20250058768 
+**Repositório/arquivo:** [DIM0501 - Projeto Agenda Fácil](https://github.com/gusless/DIM0501-project-agenda-facil)
 
 ## 1. Diagnóstico do código-base
 
